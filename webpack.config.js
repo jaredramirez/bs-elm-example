@@ -21,6 +21,7 @@ module.exports = {
       {test: /\.(js|jsx)$/, use: require.resolve('babel-loader')},
       {
         test: /\.(re|rei)$/,
+        include: resolvePath('src/reason'),
         exclude: [/elm-stuff/, /node_modules/],
         use: require.resolve('bs-loader'),
       },
