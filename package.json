@@ -20,6 +20,6 @@
     "webpack-dev-server": "2.9.7"
   },
   "dependencies": {
-    "reason-elm": "0.0.2"
+    "reason-elm": "0.0.3"
   }
 }

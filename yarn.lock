@@ -2801,9 +2801,9 @@ readdirp@^2.0.0:
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
 
-reason-elm@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/reason-elm/-/reason-elm-0.0.2.tgz#73f61fc60334fefcc2a1a4a21bbb016177130ffb"
+reason-elm@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/reason-elm/-/reason-elm-0.0.3.tgz#c544ac4165c0085acb4b479d3402d9ae74934dc2"
 
 redent@^1.0.0:
   version "1.0.0"
