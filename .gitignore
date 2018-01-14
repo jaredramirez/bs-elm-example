@@ -1,4 +1,5 @@
-node_modules/
-elm-stuff/
+/node_modules/
+/elm-stuff/
 .merlin
-lib/
+/lib/bs/
+/lib/ocaml/
