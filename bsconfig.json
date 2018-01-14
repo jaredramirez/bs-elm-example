@@ -1,0 +1,10 @@
+{
+  "name": "reason-elm-simple-example",
+  "refmt": 3,
+  "bs-dependencies": ["reason-elm"],
+  "sources": {
+    "dir": "src",
+    "subdirs": [{"dir": "simple", "subdirs": "reason"}]
+  },
+  "bsc-flags": ["-bs-super-errors"]
+}
