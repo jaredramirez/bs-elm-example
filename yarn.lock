@@ -2036,6 +2036,10 @@ locate-path@^2.0.0:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
 
+lodash.get@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+
 lodash@4.14.2:
   version "4.14.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.14.2.tgz#bbccce6373a400fbfd0a8c67ca42f6d1ef416432"
@@ -2801,9 +2805,11 @@ readdirp@^2.0.0:
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
 
-reason-elm@0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/reason-elm/-/reason-elm-0.0.3.tgz#c544ac4165c0085acb4b479d3402d9ae74934dc2"
+reason-elm@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/reason-elm/-/reason-elm-0.0.4.tgz#87acd489e3a78e50710e90de48aac2e4df70fa43"
+  dependencies:
+    lodash.get "^4.4.2"
 
 redent@^1.0.0:
   version "1.0.0"

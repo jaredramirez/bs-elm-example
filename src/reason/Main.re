@@ -9,11 +9,13 @@ type ports = {
 
 /* ELM PROGRAM */
 [@bs.module]
-external elmProgram : ReasonElm.elmProgramWithPorts(ports) = "../elm/Main.elm";
+external elmProgram : ReasonElm.elmProgramWithPorts(ports) =
+  "../elm/Other/Main.elm";
 
 let instance =
   ReasonElm.mount(
     ~flags={"title": "Buttons (title set in Reason via flags)"},
+    ~moduleName="Other.Main",
     elmProgram
   );
 

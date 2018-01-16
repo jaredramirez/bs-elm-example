@@ -1,4 +1,4 @@
-port module Main exposing (..)
+port module Other.Main exposing (..)
 
 import Html exposing (Html)
 import Html.Attributes as Attrs
