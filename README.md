@@ -11,7 +11,7 @@
 * Open the code and poke around!
 
 ### Other things
-* Checkout an example using the parcel bundler [here](https://github.com/splodingsocks/reasonable-app)
+* Checkout an example using the parcel bundler [here](https://github.com/splodingsocks/reasonable-app)!
 * This example is pretty simple, but demonstrates mounting an Elm app in Reason, passing flags on the app instantiation, and interacting with ports. If there's other example you want (like an example of ports following the actor model?), let me know!
 * There's some pretty cool usage of webpack in this example, because you can import the Elm application directly in Reason. Checkout the [`webpack config`](webpack.config.js) for more details.
 * When you run with `yarn webpack:serve` for the first time, webpack bundles `ReasonElm` multiple times. Building with regular webpack works correctly, and this only occurs the first time with `yarn webpack:serve`. It also occasionally occurs bundling `Main.re`. I suspect it's an issue with reason/bs-loader & webpack but it is unconfirmed.
