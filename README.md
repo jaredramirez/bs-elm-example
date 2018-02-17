@@ -1,4 +1,4 @@
-## bs-elm Example
+## bs-elm example
 
 ### Running the example
 * Make sure both Reason and Elm are installed
