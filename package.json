@@ -21,6 +21,6 @@
     "webpack-dev-server": "2.9.7"
   },
   "dependencies": {
-    "bs-elm": "^0.0.6"
+    "bs-elm": "1.0.0"
   }
 }

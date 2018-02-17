@@ -3,8 +3,8 @@ module R = Js.Result;
 /* PORTS */
 type ports = {
   .
-  "infoForReason": Elm.elmInPort(string),
-  "infoForElm": Elm.elmOutPort(string)
+  "infoForReason": Elm.portFromElm(string),
+  "infoForElm": Elm.portToElm(string)
 };
 
 /* ELM PROGRAM */

@@ -463,9 +463,9 @@ browserify-zlib@^0.2.0:
   dependencies:
     pako "~1.0.5"
 
-bs-elm@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/bs-elm/-/bs-elm-0.0.6.tgz#3969da69301ac4bc394c8d0e4a699ea8ffd96f52"
+bs-elm@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/bs-elm/-/bs-elm-1.0.0.tgz#c06b49046a172fa00bb32d939265d17500aad5bf"
   dependencies:
     lodash.get "^4.4.2"
 
