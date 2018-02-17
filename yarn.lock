@@ -463,6 +463,12 @@ browserify-zlib@^0.2.0:
   dependencies:
     pako "~1.0.5"
 
+bs-elm@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/bs-elm/-/bs-elm-0.0.6.tgz#3969da69301ac4bc394c8d0e4a699ea8ffd96f52"
+  dependencies:
+    lodash.get "^4.4.2"
+
 bs-loader@1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/bs-loader/-/bs-loader-1.8.0.tgz#4bf5e15c00d113ed4b091b8acba50962602d3c6f"
@@ -2804,12 +2810,6 @@ readdirp@^2.0.0:
     minimatch "^3.0.2"
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
-
-reason-elm@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/reason-elm/-/reason-elm-0.0.4.tgz#87acd489e3a78e50710e90de48aac2e4df70fa43"
-  dependencies:
-    lodash.get "^4.4.2"
 
 redent@^1.0.0:
   version "1.0.0"

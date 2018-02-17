@@ -5,6 +5,7 @@
   "scripts": {
     "bsb": "node_modules/.bin/bsb",
     "bsb:build": "yarn bsb -make-world",
+    "bsb:clean": "yarn bsb -clean-world",
     "webpack": "node_modules/.bin/webpack",
     "webpack:watch": "yarn webpack --watch",
     "webpack:serve": "node_modules/.bin/webpack-dev-server"
@@ -20,6 +21,6 @@
     "webpack-dev-server": "2.9.7"
   },
   "dependencies": {
-    "reason-elm": "^0.0.4"
+    "bs-elm": "^0.0.6"
   }
 }

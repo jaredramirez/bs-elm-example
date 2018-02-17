@@ -1,7 +1,7 @@
 {
-  "name": "reason-elm-example",
+  "name": "bs-elm-example",
   "refmt": 3,
-  "bs-dependencies": ["reason-elm"],
+  "bs-dependencies": ["bs-elm"],
   "sources": {
     "dir": "src",
     "subdirs": ["reason"]

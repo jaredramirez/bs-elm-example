@@ -3,17 +3,16 @@ module R = Js.Result;
 /* PORTS */
 type ports = {
   .
-  "infoForReason": ReasonElm.elmInPort(string),
-  "infoForElm": ReasonElm.elmOutPort(string)
+  "infoForReason": Elm.elmInPort(string),
+  "infoForElm": Elm.elmOutPort(string)
 };
 
 /* ELM PROGRAM */
 [@bs.module]
-external elmProgram : ReasonElm.elmProgramWithPorts(ports) =
-  "../elm/Other/Main.elm";
+external elmProgram : Elm.elmProgramWithPorts(ports) = "../elm/Other/Main.elm";
 
 let instance =
-  ReasonElm.mount(
+  Elm.mount(
     ~flags={"title": "Buttons (title set in Reason via flags)"},
     ~moduleName="Other.Main",
     elmProgram
