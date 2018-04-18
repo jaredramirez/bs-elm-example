@@ -4,21 +4,22 @@ module R = Js.Result;
 type ports = {
   .
   "infoForReason": Elm.portFromElm(string),
-  "infoForElm": Elm.portToElm(string)
+  "infoForElm": Elm.portToElm(string),
 };
 
 /* ELM PROGRAM */
 [@bs.module]
-external elmProgram : Elm.elmProgramWithPorts(ports) = "../elm/Other/Main.elm";
+external elmProgram : Elm.elmProgramWithPorts(ports) =
+  "../elm/Other/Main.elm";
 
 let instance =
   Elm.mount(
     ~flags={"title": "Buttons (title set in Reason via flags)"},
     ~moduleName="Other.Main",
-    elmProgram
+    elmProgram,
   );
 
-switch instance {
+switch (instance) {
 | R.Ok(i) =>
   let infoForReason = i##ports##infoForReason;
   let infoForElm = i##ports##infoForElm;

@@ -6,21 +6,22 @@
     "bsb": "node_modules/.bin/bsb",
     "bsb:build": "yarn bsb -make-world",
     "bsb:clean": "yarn bsb -clean-world",
+    "bsb:start": "yarn bsb -make-world -w",
     "webpack": "node_modules/.bin/webpack",
     "webpack:watch": "yarn webpack --watch",
+    "webpack:prod": "NODE_ENV=production && yarn webpack",
     "webpack:serve": "node_modules/.bin/webpack-dev-server"
   },
   "devDependencies": {
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
-    "bs-loader": "1.8.0",
-    "bs-platform": "2.1.0",
+    "bs-platform": "3.0.0",
     "elm-webpack-loader": "4.4.0",
     "html-webpack-plugin": "2.30.1",
     "webpack": "3.10.0",
     "webpack-dev-server": "2.9.7"
   },
   "dependencies": {
-    "bs-elm": "1.0.0"
+    "bs-elm": "1.0.2"
   }
 }

@@ -9,7 +9,7 @@ const resolvePath = relativePath => path.resolve(__dirname, relativePath);
 module.exports = {
   devtool: 'cheap-module-source-map',
 
-  entry: resolvePath('src/reason/Main.re'),
+  entry: resolvePath('src/reason/Main.bs.js'),
 
   output: {
     path: resolvePath('lib'),
@@ -19,12 +19,6 @@ module.exports = {
   module: {
     rules: [
       {test: /\.(js|jsx)$/, use: require.resolve('babel-loader')},
-      {
-        test: /\.(re|rei)$/,
-        include: resolvePath('src/reason'),
-        exclude: [/elm-stuff/, /node_modules/],
-        use: require.resolve('bs-loader'),
-      },
       {
         test: /\.elm$/,
         exclude: [/elm-stuff/, /node_modules/],
@@ -41,7 +35,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.js', '.jsx', '.re', '.rei', '.elm'],
+    extensions: ['.js', '.jsx', '.elm'],
   },
 
   plugins: [

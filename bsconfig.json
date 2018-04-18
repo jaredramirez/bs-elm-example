@@ -1,10 +1,15 @@
 {
   "name": "bs-elm-example",
   "refmt": 3,
+  "suffix": ".bs.js",
   "bs-dependencies": ["bs-elm"],
   "sources": {
     "dir": "src",
     "subdirs": ["reason"]
+  },
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
   },
   "bsc-flags": ["-bs-super-errors"]
 }
