@@ -7,7 +7,7 @@
 * Go in the directory `cd bs-elm-example`
 * Install the dependencies with `yarn install` or `npm install`
 * Install the elm dependencies with `elm-package install`
-* In one, start bucklescript with `yarn bsb:start` or `npm run bsb:start`
+* In one tab, start bucklescript with `yarn bsb:start` or `npm run bsb:start`
 * In another tab, launch the dev server with `yarn webpack:serve` or `npm run webpack:serve`
 * Navigate to [`localhost:8080`](http://localhost:8080)
 * Open the code and poke around!
