@@ -1,4 +1,4 @@
-module R = Js.Result;
+module R = Belt.Result;
 
 /* PORTS */
 type ports = {

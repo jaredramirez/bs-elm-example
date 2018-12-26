@@ -1,10 +1,12 @@
-port module Other.Main exposing (..)
+port module Other.Main exposing (Flags, Model, Msg(..), infoForElm, infoForReason, init, main, subscriptions, update, view)
 
+import Browser
 import Html exposing (Html)
 import Html.Attributes as Attrs
 import Html.Events as Events
-import Json.Encode as Encode
 import Json.Decode as Decode
+import Json.Encode as Encode
+
 
 
 -- MODEL
@@ -23,10 +25,11 @@ type alias Flags =
 
 init : Flags -> ( Model, Cmd Msg )
 init flags =
-    { title = flags.title
-    , response = Nothing
-    }
-        ! []
+    ( { title = flags.title
+      , response = Nothing
+      }
+    , Cmd.none
+    )
 
 
 
@@ -42,14 +45,12 @@ type Msg
 -- VIEW
 
 
-view : Model -> Html Msg
+view : Model -> List (Html Msg)
 view model =
-    Html.div
-        [ Attrs.style
-            [ ( "display", "flex" )
-            , ( "flex-direction", "column" )
-            , ( "width", "500px" )
-            ]
+    [ Html.div
+        [ Attrs.style "display" "flex"
+        , Attrs.style "flex-direction" "column"
+        , Attrs.style "width" "500px"
         ]
         [ Html.h2 [] [ Html.text model.title ]
         , Html.button [ Events.onClick <| SendToReason "Button 1" ]
@@ -58,6 +59,7 @@ view model =
             [ Html.text "Button 2" ]
         , Html.span [] [ Html.text <| Maybe.withDefault "" model.response ]
         ]
+    ]
 
 
 
@@ -68,10 +70,14 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         SendToReason message ->
-            model ! [ infoForReason message ]
+            ( model
+            , infoForReason message
+            )
 
         GetFromReason s ->
-            { model | response = Just s } ! []
+            ( { model | response = Just s }
+            , Cmd.none
+            )
 
 
 
@@ -97,11 +103,14 @@ subscriptions model =
 -- MAIN
 
 
-main : Program Flags Model Msg
 main =
-    Html.programWithFlags
+    Browser.document
         { init = init
-        , view = view
+        , view =
+            \model ->
+                { title = "BS Elm Example"
+                , body = view model
+                }
         , update = update
         , subscriptions = subscriptions
         }
